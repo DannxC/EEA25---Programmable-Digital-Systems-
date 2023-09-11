@@ -1,0 +1,27 @@
+# Map the 7-segment display signals to FPGA pins
+set_io seven_segment_out[6] E2
+set_io seven_segment_out[5] B1
+set_io seven_segment_out[4] C5
+set_io seven_segment_out[3] C6
+set_io seven_segment_out[2] E3
+set_io seven_segment_out[1] C2
+set_io seven_segment_out[0] B4
+
+# Map the clock signal to FPGA pin with built-in oscillator
+set_io clk D1
+
+# Apply a pull-up resistor to the reset signal and map it to FPGA pin
+set_io -pullup yes rst A1
+
+# Disable warnings for specific pins
+set_io -nowarn PMOD1 D1
+set_io -nowarn PMOD1 A1
+
+# Additional pins (assuming these are PMOD connections, warnings disabled)
+set_io -nowarn PMOD2 E2
+set_io -nowarn PMOD1 B1
+set_io -nowarn PMOD2 C5
+set_io -nowarn PMOD2 C6
+set_io -nowarn PMOD1 E3
+set_io -nowarn PMOD2 C2
+set_io -nowarn PMOD2 B4
