@@ -1,0 +1,68 @@
+# Compiled Object files
+*.o
+*.a
+*.so
+*.out
+
+# Logs and databases
+*.log
+*.db
+
+# Compiled Dynamic libraries
+*.dylib
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+*.dll
+
+# Simulation output files
+*.vcd
+*.vvp
+*.gtkw
+
+# FPGA synthesis files
+*.bit
+*.bin
+
+# Icarus Verilog generated files
+vvp.a.out
+
+# Yosys generated files
+*.ys
+
+# Iceprog generated files
+*.ice
+
+# Cache
+*.cache/
+
+# Other generated files
+_work/
+
+# Document and Image Files
+*.pdf
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+*.png
+*.jpg
+*.jpeg
+*.gif
+# Add more document and image extensions as needed
