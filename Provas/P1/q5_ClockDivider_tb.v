@@ -20,7 +20,7 @@ module ClockDivider_tb;
     );
 
     initial begin
-        $dumpfile("ClockDivider_tb.vcd");
+        $dumpfile("q5_ClockDivider_tb.vcd");
         $dumpvars(0, ClockDivider_tb);
     end
 
@@ -34,20 +34,19 @@ module ClockDivider_tb;
 
     // Testes
     initial begin
-        Reset = 1'b1;
+        Reset = 1'b0;  // Ativar o Reset (nível baixo)
         Sel = 2'b00;
         Clock_in = 1'b0;  // Inicializar o Clock
 
-        // Liberar o Reset
-        #10 Reset = 1'b0;
+        #10 Reset = 1'b1;  // Liberar o Reset (nível alto)
 
-        // Testar diferentes seleções
-        #20 Sel = 2'b01;
-        #20 Sel = 2'b10;
-        #20 Sel = 2'b11;
+        // Testar diferentes seleções e esperar 16 ciclos de clock para cada um
+        #20 Sel = 2'b01; #160;
+        #20 Sel = 2'b10; #160;
+        #20 Sel = 2'b11; #160;
 
         // Reativar o Reset
-        #20 Reset = 1'b1;
+        #20 Reset = 1'b0;  // Ativar o Reset novamente (nível baixo)
 
         // Finalizar a simulação
         #10 $finish;

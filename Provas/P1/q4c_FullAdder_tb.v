@@ -22,7 +22,7 @@ module FullAdder_tb;
 	);
 
 	initial begin
-		$dumpfile("FullAdder_tb.vcd");
+		$dumpfile("q4c_FullAdder_tb.vcd");
 		$dumpvars(0, FullAdder_tb);
 	end
 
