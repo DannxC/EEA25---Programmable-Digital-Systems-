@@ -9,7 +9,7 @@ module frequency_divider (
 
     wire rst;
     reg [31:0] count;
-    localparam [31:0] max_count = (1) - 1;
+   auth/login?next=%2F
 
     // EXERCISE 3
     // To convert a 12 MHz (12,000,000 Hz) clock signal to a 1 Hz signal, 
