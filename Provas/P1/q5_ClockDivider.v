@@ -21,7 +21,6 @@ module d_flip_flop (
     end
 endmodule
 
-
 // Módulo do Divisor de Clock Programável
 module ClockDivider (
     output wire Clock_out,
