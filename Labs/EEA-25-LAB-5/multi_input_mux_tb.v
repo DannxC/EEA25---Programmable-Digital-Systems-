@@ -1,14 +1,14 @@
-`include "ALU.v"
+`include "multi_input_mux.v"
 `timescale 1ns / 1ps
 
-module ALU_tb;
+module multi_input_mux_tb;
     // Declare internal signals
     reg [3:0] i0, i1, i2, i3;
     reg [1:0] s;
     wire [3:0] y;
 
-    // Instantiate the ALU module
-    ALU uut (
+    // Instantiate the multi_input_mux module
+    multi_input_mux uut (
         .i0(i0), .i1(i1), .i2(i2), .i3(i3),
         .s(s),
         .y(y)
@@ -16,8 +16,8 @@ module ALU_tb;
 
     // Dump variables
     initial begin
-        $dumpfile("ALU_tb.vcd");
-        $dumpvars(0, ALU_tb, uut);  // Dump all variables at this hierarchy
+        $dumpfile("multi_input_mux_tb.vcd");
+        $dumpvars(0, multi_input_mux_tb, uut);  // Dump all variables at this hierarchy
     end
 
     // Monitor output

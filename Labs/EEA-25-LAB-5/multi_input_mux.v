@@ -1,15 +1,15 @@
-// O HDL representa uma Unidade Lógica Aritmética (ALU) 
-// de 4 bits com 4 entradas (i0, i1, i2, i3) e uma saída 
+// O HDL representa uma parte de uma Unidade Lógica Aritmética
+// (ALU) de 4 bits com 4 entradas (i0, i1, i2, i3) e uma saída 
 // de 4 bits (y). O seletor de 2 bits (s) determina qual 
 // entrada é direcionada para a saída.
 
 // O circuito atual é mais complexo e agrega vários conceitos 
 // dos laboratórios anteriores. Enquanto os laboratórios 
 // anteriores focaram em blocos mais simples, como comparadores 
-// e multiplexadores, este laboratório envolve uma ALU 
-// com múltiplas entradas e operações.
+// e multiplexadores, este laboratório envolve uma parte de uma 
+// ALU com múltiplas entradas e operações.
 
-module ALU (
+module multi_input_mux (
     // Inputs
     input [3:0] i0, i1, i2, i3,
     input [1:0] s,
