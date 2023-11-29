@@ -2,7 +2,7 @@
 module rcvr_test;
 
   localparam [1:14*8] message_send = "I Love Verilog" ;
-  localparam [1:8] head = 8'hA5 ;
+  localparam [1:8] head = 8'hA5 ; // Password for the message start to being read effectively
 
   reg        clock    ;
   reg        reset    ;
